@@ -3,7 +3,7 @@ public class Crossing {
 
         System.out.println("Initializing Traffic Crossing");
         TrafficLight trafficLight = new TrafficLight();
-        trafficLight.showColor(3);
+        trafficLight.getColor(3);
 
     }
 }

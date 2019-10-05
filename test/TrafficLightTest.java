@@ -14,23 +14,23 @@ public class TrafficLightTest {
 
     @Test
     public void showTrafficLightRedColor() {
-        String result = SUT.showColor(1);
+        String result = SUT.getColor(1);
         assertThat(result, is("Red"));
     }
     @Test
     public void showTrafficLightOrangeColor() {
-        String result = SUT.showColor(2);
+        String result = SUT.getColor(2);
         assertThat(result, is("Orange"));
     }
     @Test
     public void showTrafficLightGreenColor() {
-        String result = SUT.showColor(3);
+        String result = SUT.getColor(3);
         assertThat(result, is("Green"));
     }
 
     @Test
     public void showTrafficLightInvalidNumber() {
-        String result = SUT.showColor(0);
+        String result = SUT.getColor(0);
         assertThat(result, is("Invalid Light Number"));
     }
 
