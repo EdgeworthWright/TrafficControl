@@ -3,11 +3,13 @@ public class TrafficLight {
     private int id;
     private int numberOfLights;
     private int defaultColor;
+    private int currentColor;
 
     public TrafficLight() {
         id = 0;
         numberOfLights = 3;
         defaultColor = 1;
+        currentColor = defaultColor;
     }
 
     /**
@@ -40,11 +42,43 @@ public class TrafficLight {
                 result = "Green";
                 break;
             default:
-                System.out.println("Red");
-                result = "red";
+                System.out.println("Invalid Light Number");
+                result = "Invalid Light Number";
                 break;
         }
         return result;
+    }
+
+    public int changeColor(int light) {
+        int result;
+        switch (light) {
+            case 1:
+                System.out.println("Green");
+                result = 3;
+                break;
+            case 2:
+                System.out.println("Red");
+                result = 1;
+                break;
+            case 3:
+                System.out.println("Orange");
+                result = 2;
+                break;
+            default:
+                System.out.println("Invalid Light Number");
+                result = 0;
+                break;
+        }
+        currentColor = result;
+        return result;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public int getCurrentColor() {
+        return currentColor;
     }
 
     /**
@@ -83,10 +117,19 @@ public class TrafficLight {
     }
 
     /**
+     *
      * @param defaultColor
      */
     public void setDefaultColor(int defaultColor) {
         this.defaultColor = defaultColor;
+    }
+
+    /**
+     *
+     * @param currentColor
+     */
+    public void setCurrentColor(int currentColor) {
+        this.currentColor = currentColor;
     }
 
     /**
