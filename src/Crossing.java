@@ -1,13 +1,22 @@
 public class Crossing {
+    private static int numberOfLights = 3;
+    private static int numberOfTrafficLights = 6;
+
     public static void main(String[] args) {
 
-        System.out.println("Initializing Traffic Crossing");
-        TrafficLight trafficLight = new TrafficLight();
-        //trafficLight.getColor(3);
-        for (int i = 0; i < 10; i++) {
-            trafficLight.changeColor(trafficLight.getCurrentColor());
-        }
+        System.out.println("Initializing " +
+                        "Traffic " +
+                        "Crossing"
+        );
 
-        trafficLight.getColor(trafficLight.getCurrentColor());
+        TrafficController controller = new TrafficController();
+    }
+
+    public static int getNumberOfTrafficLights() {
+        return numberOfTrafficLights;
+    }
+
+    public static int getNumberOfLights() {
+        return numberOfLights;
     }
 }

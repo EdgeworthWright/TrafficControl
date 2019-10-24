@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class TrafficLight {
 
     private int id;
@@ -13,12 +15,23 @@ public class TrafficLight {
     }
 
     /**
+     *
      * @param id
      * @param numberOfLights
      */
     public TrafficLight(int id, int numberOfLights) {
         this.id = id;
         this.numberOfLights = numberOfLights;
+
+        // Random light color
+        setCurrentColor(createRandomNumber(3) + 1);
+    }
+
+    public static int createRandomNumber(int seed){
+
+        Random random = new Random();
+
+        return random.nextInt(seed);
     }
 
     /**
